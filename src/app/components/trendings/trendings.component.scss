@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 4px;
+  margin-top: 16px;
+
+  & h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  & a {
+    color: var(--ion-color-dark-tint);
+  }
+}
+
+swiper-slide {
+  --padding: 8px;
+  padding-inline: var(--padding);
+}
+
+.swiper-image {
+  padding-block: var(--padding);
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+
+  & ion-img {
+    min-height: 150px;
+  }
+
+  & ion-badge {
+    position: absolute;
+    top: calc(var(--padding) + 5px);
+    right: 5px;
+  }
+}
+
+.swiper-title {
+  display: flex;
+  gap: 4px;
+  font-size: 0.875rem;
+
+  & .title {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & .year {
+    color: var(--ion-color-medium-tint);
+  }
+}
+
+.swiper-subtitle {
+  font-size: 0.75rem;
+  color: var(--ion-color-medium-tint);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* start showing ellipsis when 3rd line is reached */
+  white-space: pre-wrap; /* let the text wrap preserving spaces */
+}

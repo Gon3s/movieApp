@@ -1,0 +1,20 @@
+<div class="header">
+  <h2>Trending {{ type.title }}</h2>
+  <a>Show All</a>
+</div>
+
+<swiper-container [slidesPerView]="2.2" [lazyPreloadPrevNext]="2">
+  <swiper-slide *ngFor="let item of items">
+    <div class="swiper-image">
+      <ion-img src="{{ item.image }}" alt="{{ item.title }}"></ion-img>
+      <ion-badge>{{ item.imDbRating }}</ion-badge>
+    </div>
+
+    <div class="swiper-title">
+      <span class="title">{{ item.title }}</span>
+      <span class="year">({{ item.year }})</span>
+    </div>
+
+    <div class="swiper-subtitle">{{ item.crew }}</div>
+  </swiper-slide>
+</swiper-container>

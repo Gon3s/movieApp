@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ionic Movie App</ion-title>
+    <ion-buttons slot="end">
+      <ion-button tab="search" [routerLink]="['/tabs/search']">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-trendings [type]="movieConstant.MOVIES"></app-trendings>
+  <app-trendings [type]="movieConstant.TV"></app-trendings>
+  <app-trendings [type]="movieConstant.THEATRE"></app-trendings>
+</ion-content>
